@@ -11,14 +11,17 @@ public class ex9
 //report flag status
 
 String inputnumber="";
-int n1=0, n2=0, i=0;
-boolean flag = true;
-
- System.out.println ("please give first number");
+int n1=1, n2=0, i=0;
+boolean flag = true; 
+ System.out.println ("please give positive number -1 to end");
  inputnumber = System.console().readLine(); 
  n1 = Integer.parseInt(inputnumber);
  i = n1; 
- while (n1 != -1 ) {
+ if (n1 <= -1) {
+ 	flag = false;
+	System.out.println ("This isn't positive"); 
+	} 
+ while (n1 != -1 && n1 > 0 ) {
  	System.out.println ("and another");
 	inputnumber = System.console().readLine();
 	n1 = Integer.parseInt(inputnumber);
