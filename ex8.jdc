@@ -1,0 +1,23 @@
+//ask for first number and say end with -1
+//if -1 say please add at least 1 positive number
+//ask for another
+//if -1 break else if n > heighest number then  heighest number is n
+
+String inputnumber="";
+int n1=0, h=0;
+
+ println ("please give first number");
+ inputnumber = System.console().readLine(); 
+ h = Integer.parseInt(inputnumber);
+ while (n1 != -1 && h != -1) {
+ 	println ("and another");
+	inputnumber = System.console().readLine();
+	n1 = Integer.parseInt(inputnumber);
+	if (n1 > h) {
+	h = n1;
+	}
+}
+println ("The heighest number was " + h);
+	
+ 
+ 
