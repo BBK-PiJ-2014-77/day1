@@ -1,0 +1,24 @@
+//ask for number
+
+//ask for second number
+
+//loop through adding first number together for number of time = to second 
+
+String number="", times="", answer="";
+int n=0, t=0, i=1, a=0;
+ println ("first number");
+ number = System.console().readLine(); 
+ n = Integer.parseInt(number);
+ println ("second number");
+ times = System.console().readLine(); 
+ t = Integer.parseInt(times);
+ 
+ while ( i <= t ) {
+ 	a = a + n;
+	if (i == t) {
+		println ("product is "+ a);
+	}
+	i++;
+}
+ 
+

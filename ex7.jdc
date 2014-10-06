@@ -1,0 +1,31 @@
+String sn1="", sn2="", sn3="";
+int n1=0, n2=0, n3=0, i=0;
+boolean stop=false, a=false, b=false, c=false;
+println ("first number");
+sn1 = System.console().readLine();
+n1  = Integer.parseInt(sn1);
+println ("second number");
+sn2 = System.console().readLine();
+n2  = Integer.parseInt(sn2);
+println ("third number");
+sn3 = System.console().readLine();
+n3  = Integer.parseInt(sn3);
+while (stop == false) {
+	if (i == n1)  {
+	println (n1); 
+	a = true;
+	}
+	if (i == n2) {
+	println (n2);
+	b = true;
+	}
+	if (i == n3) {
+	println (n3);
+	c = true;
+	}
+	if (a&b&c == true) {
+	stop = true;
+	}
+i++;
+}
+
