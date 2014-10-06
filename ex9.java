@@ -11,26 +11,49 @@ public class ex9
 //report flag status
 
 String inputnumber="";
-int n1=1, n2=0, i=0;
-boolean flag = true; 
+int n1=0, n2=0, i=0; 
+boolean flag = true, initialcheck = false, secondflag = false;
+
+while ( initialcheck == false) { 
  System.out.println ("please give positive number -1 to end");
  inputnumber = System.console().readLine(); 
- n1 = Integer.parseInt(inputnumber);
- i = n1; 
- if (n1 <= -1) {
- 	flag = false;
-	System.out.println ("This isn't positive"); 
+ n1 = Integer.parseInt(inputnumber); 
+ 	if (n1 == -1) {
+ 		System.out.println ("Are you sure you want to quit, type -1 to quit");
+		String errorcheck = System.console().readLine();
+		int echeck = Integer.parseInt(errorcheck);
+		if (echeck == -1) { 
+ 			flag = false;
+			System.out.println ("ok");
+			initialcheck = true;
+		} 
+	}
+	else if (n1 < 0 ) {
+	System.out.println ("not positive");
 	} 
- while (n1 != -1 && n1 > 0 ) {
+	else {	
+	initialcheck = true;
+	}
+}
+
+i = n1;
+
+while (n1 != -1 && n1 > 0 ) {
  	System.out.println ("and another");
 	inputnumber = System.console().readLine();
-	n1 = Integer.parseInt(inputnumber);
-	if (n1 != i + 1 && n1 != -1) {
-		flag = false;
+	n2 = Integer.parseInt(inputnumber);
+	if ( n2 >= -1 ) {
+		n1 = n2;
+		if (n1 != i + 1 && n1 != -1) {
+			flag = false;
+		}
 	}
-i = n1;
-	
+	else {
+	System.out.println ("Not accepted");
+	}
+i = n1;	
 }
+
 System.out.println ("It is " + flag + " that this is a sequence" );
 }}
 
