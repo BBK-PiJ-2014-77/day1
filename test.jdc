@@ -1,0 +1,11 @@
+int cv = 1;
+String cardnumber = "";
+println ("please give value of card number ");
+cardnumber =  System.console().readLine(); 
+	if ( cardnumber == "j" ) {
+		cardnumber = "11";
+		}
+		
+cv = Integer.parseInt(cardnumber); 
+
+println (cv);
