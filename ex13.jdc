@@ -1,0 +1,30 @@
+//ask for number
+
+//do a loop for values of I from 2 to number-1 and calculate modulo
+
+//if modulo is 0 break and say not prime
+
+//if go to number-1 print number prime
+
+String number="";
+int n=2, i=2, input = 0;
+println ("give me a number above 2");
+number = System.console().readLine();
+input = Integer.parseInt(number);
+
+while (n <= input) {
+
+while ( i < n ) {
+	if (n % i != 0) {
+	i++;
+	if ( i == n ) {
+		println ("This is a prime number " + n);
+	}
+	}
+	else { 
+	i = n;
+	}
+}
+i = 2;
+n++;
+}
